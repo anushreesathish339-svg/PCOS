@@ -1,0 +1,218 @@
+.analytics-page {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.analytics-hero {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 30px;
+  border: 1px solid rgba(151, 105, 190, 0.18);
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at top left, rgba(255, 221, 238, 0.95), transparent 36%),
+    linear-gradient(135deg, #ffffff 0%, #f7efff 55%, #eaf8f2 100%);
+  box-shadow: 0 20px 50px rgba(93, 59, 113, 0.12);
+}
+
+.analytics-kicker {
+  margin: 0 0 8px;
+  color: #9a6eb4;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.analytics-hero h2 {
+  margin: 0;
+  color: #433050;
+  font-size: clamp(32px, 4vw, 48px);
+  letter-spacing: -0.04em;
+}
+
+.analytics-hero p:last-child {
+  max-width: 620px;
+  margin: 10px 0 0;
+  color: #76677f;
+}
+
+.mvi-score-card {
+  min-width: 210px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 22px;
+  border-radius: 24px;
+  background: linear-gradient(145deg, #8a5bd4, #df79c6);
+  color: #fff;
+  box-shadow: 0 18px 36px rgba(138, 91, 212, 0.28);
+}
+
+.mvi-score-card span,
+.mvi-score-card small {
+  font-weight: 800;
+  opacity: 0.9;
+}
+
+.mvi-score-card strong {
+  margin: 6px 0;
+  font-size: 52px;
+  line-height: 1;
+}
+
+.analytics-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.analytics-mini-card,
+.chart-card {
+  border: 1px solid rgba(151, 105, 190, 0.15);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.86);
+  box-shadow: 0 14px 34px rgba(93, 59, 113, 0.08);
+}
+
+.analytics-mini-card {
+  padding: 20px;
+}
+
+.analytics-mini-card span,
+.analytics-mini-card small {
+  color: #8a7894;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.analytics-mini-card strong {
+  display: block;
+  margin: 8px 0 4px;
+  color: #433050;
+  font-size: 24px;
+}
+
+.merged-analytics-card {
+  border: 1px solid rgba(151, 105, 190, 0.15);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 10px 30px rgba(93, 59, 113, 0.06);
+  padding: 16px;
+}
+
+.analytics-chart-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.chart-card {
+  padding: 10px 14px;
+}
+
+.chart-card-wide {
+  grid-column: 1 / -1;
+  max-width: 580px;
+}
+
+.chart-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.chart-card-header p {
+  margin: 0 0 1px;
+  color: #9a6eb4;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.chart-card-header h4 {
+  margin: 0;
+  color: #433050;
+  font-size: 16px;
+}
+
+.chart-card-header span {
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: #f4eaff;
+  color: #7c58a5;
+  font-size: 10px;
+  font-weight: 900;
+}
+
+.chart-frame {
+  height: 150px;
+}
+
+@media (max-width: 980px) {
+  .analytics-hero {
+    flex-direction: column;
+  }
+
+  .analytics-summary-grid,
+  .analytics-chart-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mvi-score-card {
+    min-width: 0;
+  }
+}
+
+.analytics-loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  color: #76677f;
+  font-weight: 500;
+}
+
+.analytics-spinner {
+  width: 48px;
+  height: 48px;
+  border: 4px solid rgba(138, 91, 212, 0.15);
+  border-top-color: #8a5bd4;
+  border-radius: 50%;
+  animation: spin 1s infinite linear;
+  margin-bottom: 16px;
+}
+
+.analytics-empty-state {
+  margin-top: 24px;
+  padding: 60px 40px !important;
+  border-radius: 28px !important;
+  background: white;
+  border: 1px solid rgba(151, 105, 190, 0.15) !important;
+}
+
+.analytics-empty-state h3 {
+  color: #433050;
+  font-weight: 800;
+  margin-top: 12px;
+}
+
+.analytics-empty-state p {
+  color: #76677f;
+  font-size: 15px;
+  line-height: 1.6;
+  max-width: 500px;
+  margin: 8px auto 24px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

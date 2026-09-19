@@ -1,0 +1,9 @@
+.clean-web-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0 !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05) !important;
+}
+
+.chart-wrapper {
+  padding: 10px;
+}

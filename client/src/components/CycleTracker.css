@@ -1,0 +1,289 @@
+.cycle-page {
+    display: grid;
+    grid-template-columns: minmax(360px, 1.15fr) minmax(280px, 0.85fr);
+    gap: 24px;
+    align-items: start;
+}
+
+.calendar-card,
+.cycle-info {
+    border: 1px solid rgba(151, 105, 190, 0.16);
+    border-radius: 28px;
+    background:
+        radial-gradient(circle at top left, rgba(255, 216, 237, 0.95), transparent 34%),
+        linear-gradient(145deg, #ffffff 0%, #fff8fd 52%, #f8f1ff 100%);
+    box-shadow: 0 22px 55px rgba(93, 59, 113, 0.13);
+}
+
+.calendar-card {
+    padding: 28px;
+    overflow: hidden;
+}
+
+.cycle-card-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    align-items: flex-start;
+    margin-bottom: 22px;
+}
+
+.cycle-eyebrow {
+    margin: 0 0 6px;
+    color: #9a6eb4;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.cycle-card-header h2 {
+    margin: 0;
+    color: #4e3267;
+    font-size: 30px;
+    letter-spacing: -0.03em;
+}
+
+.cycle-pill {
+    flex: 0 0 auto;
+    padding: 10px 16px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #9163d0, #d77cce);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 800;
+    box-shadow: 0 10px 24px rgba(145, 99, 208, 0.28);
+}
+
+.calendar-card .react-calendar {
+    width: 100%;
+    border: 0;
+    border-radius: 24px;
+    padding: 18px;
+    background: rgba(255, 255, 255, 0.78);
+    box-shadow: inset 0 0 0 1px rgba(151, 105, 190, 0.12);
+    font-family: inherit;
+}
+
+.calendar-card .react-calendar__navigation {
+    height: auto;
+    margin-bottom: 18px;
+    align-items: center;
+}
+
+.calendar-card .react-calendar__navigation button {
+    min-width: 42px;
+    height: 42px;
+    border-radius: 14px;
+    color: #5b3b72;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.calendar-card .react-calendar__navigation button:enabled:hover,
+.calendar-card .react-calendar__navigation button:enabled:focus {
+    background: #f3e7ff;
+}
+
+.calendar-card .react-calendar__navigation__label {
+    color: #3f294f;
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.calendar-card .react-calendar__month-view__weekdays {
+    color: #a178ad;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.calendar-card .react-calendar__month-view__weekdays abbr {
+    text-decoration: none;
+}
+
+.calendar-card .react-calendar__tile {
+    position: relative;
+    min-height: 58px;
+    border-radius: 18px;
+    color: #58465f;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.calendar-card .react-calendar__tile:enabled:hover,
+.calendar-card .react-calendar__tile:enabled:focus {
+    background: #f7ecff;
+    color: #5f35a0;
+}
+
+.calendar-card .react-calendar__tile--now {
+    background: #fff0db;
+    color: #a75b1f;
+}
+
+.calendar-card .react-calendar__tile--active {
+    background: linear-gradient(135deg, #7c55c7, #d77ac4);
+    color: #fff;
+    box-shadow: 0 12px 26px rgba(124, 85, 199, 0.28);
+}
+
+.calendar-card .react-calendar__month-view__days__day--neighboringMonth {
+    color: #c9bdce;
+}
+
+.calendar-card .cycle-day-period {
+    background: #ffe1ef;
+    color: #b43868;
+}
+
+.calendar-card .cycle-day-fertile {
+    background: #e8f7ef;
+    color: #2e8a62;
+}
+
+.calendar-card .cycle-day-ovulation {
+    background: #efe4ff;
+    color: #6d41ba;
+}
+
+.calendar-card .cycle-day-next {
+    background: #e4f2ff;
+    color: #276caa;
+}
+
+.cycle-dot {
+    position: absolute;
+    left: 50%;
+    bottom: 8px;
+    width: 7px;
+    height: 7px;
+    border-radius: 999px;
+    transform: translateX(-50%);
+}
+
+.period-dot {
+    background: #ec5b91;
+}
+
+.fertile-dot {
+    background: #45bf86;
+}
+
+.ovulation-dot {
+    background: #8b5ddb;
+}
+
+.next-dot {
+    background: #4c9eea;
+}
+
+.cycle-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 18px;
+    color: #6f5d78;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.cycle-legend span {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 9px 12px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.72);
+    box-shadow: inset 0 0 0 1px rgba(151, 105, 190, 0.12);
+}
+
+.legend-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 999px;
+}
+
+.cycle-info {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    padding: 22px;
+}
+
+.info-box {
+    min-height: 142px;
+    padding: 20px;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.82);
+    box-shadow: inset 0 0 0 1px rgba(151, 105, 190, 0.1);
+}
+
+.info-box h4 {
+    margin: 0 0 12px;
+    color: #7a6884;
+    font-size: 14px;
+    font-weight: 900;
+}
+
+.info-box p {
+    margin: 0;
+    color: #3f294f;
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 1.12;
+}
+
+.info-box span {
+    display: inline-flex;
+    margin-top: 14px;
+    color: #8a7894;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.period-card {
+    background: linear-gradient(145deg, #fff, #ffeaf3);
+}
+
+.next-card {
+    background: linear-gradient(145deg, #fff, #eaf5ff);
+}
+
+.length-card {
+    background: linear-gradient(145deg, #fff, #fff1df);
+}
+
+.ovulation-card {
+    background: linear-gradient(145deg, #fff, #f0e8ff);
+}
+
+@media (max-width: 1024px) {
+    .cycle-page {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .calendar-card {
+        padding: 20px;
+    }
+
+    .cycle-info {
+        grid-template-columns: 1fr;
+    }
+
+    .cycle-card-header {
+        flex-direction: column;
+    }
+
+    .calendar-card .react-calendar {
+        padding: 12px;
+    }
+
+    .calendar-card .react-calendar__tile {
+        min-height: 48px;
+        border-radius: 14px;
+    }
+}

@@ -1,0 +1,259 @@
+.register-container {
+  display: flex;
+  min-height: 100vh;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Promo Side panel styling */
+.register-left {
+  flex: 1;
+  background: linear-gradient(145deg, #baa7e8, #e7abc5);
+  color: #33253b;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 40px;
+}
+
+.register-promo {
+  max-width: 480px;
+  width: 100%;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #6d4ba4;
+  margin-bottom: 24px;
+}
+
+.brand-icon {
+  font-size: 28px;
+  color: #8b5cf6;
+}
+
+.register-left h1 {
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 1.25;
+  color: #33253b;
+  margin-bottom: 12px;
+}
+
+.promo-tagline {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #554360;
+  margin-bottom: 40px;
+}
+
+.feature-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.feature-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.feature-icon {
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  color: #7c3aed;
+  font-size: 20px;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(109, 75, 164, 0.08);
+}
+
+.feature-text h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #33253b;
+  margin: 0 0 4px 0;
+}
+
+.feature-text p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #63506e;
+  margin: 0;
+}
+
+/* Form panel styling */
+.register-right {
+  flex: 1.2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #fff8fb, #f1edff);
+  padding: 40px 20px;
+}
+
+.register-card {
+  width: 100%;
+  max-width: 620px;
+  background: white;
+  padding: 40px;
+  border-radius: 24px;
+  border: 1px solid #eadfec;
+  box-shadow: 0 18px 45px rgba(105, 78, 124, 0.12);
+}
+
+.register-card h2 {
+  font-size: 28px;
+  font-weight: 800;
+  color: #1e1b4b;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+/* 2-Column form grid */
+.register-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group.full-width {
+  grid-column: span 2;
+}
+
+.form-group label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #475569;
+  margin-bottom: 6px;
+}
+
+.input-icon {
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 11px 14px;
+  font-size: 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background-color: #f8fafc;
+  color: #1e293b;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #a78bfa;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(167, 139, 250, 0.15);
+}
+
+.form-group input::placeholder {
+  color: #94a3b8;
+}
+
+.register-submit-btn {
+  width: 100%;
+  padding: 13px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #9679bf, #d78eae);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(150, 121, 191, 0.2);
+  margin-top: 8px;
+}
+
+.register-submit-btn:hover {
+  background: linear-gradient(90deg, #8065aa, #c97c9f);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(150, 121, 191, 0.3);
+}
+
+.register-submit-btn:active {
+  transform: translateY(0);
+}
+
+.login-redirect-text {
+  text-align: center;
+  margin-top: 24px;
+  font-size: 14px;
+  color: #64748b;
+}
+
+.login-redirect-text a {
+  color: #8067b7;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.login-redirect-text a:hover {
+  color: #6d4ba4;
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .register-container {
+    flex-direction: column;
+  }
+  
+  .register-left {
+    padding: 48px 24px;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .brand-logo {
+    justify-content: center;
+  }
+  
+  .feature-item {
+    text-align: left;
+  }
+  
+  .register-right {
+    padding: 32px 16px;
+  }
+  
+  .register-card {
+    padding: 32px 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .register-form-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .form-group {
+    grid-column: span 1 !important;
+  }
+}

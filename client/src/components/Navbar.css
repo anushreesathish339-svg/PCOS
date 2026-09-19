@@ -1,0 +1,139 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 8%;
+  background: rgba(255, 250, 253, 0.95);
+  border-bottom: 1px solid #eadfec;
+  box-shadow: 0 5px 18px rgba(112, 86, 130, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 24px;
+  font-weight: 800;
+  color: #423747; /* Dark muted page color */
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.logo:hover {
+  transform: translateY(-1px);
+}
+
+.logo-spark {
+  color: #a082ad; /* Muted purple */
+  font-size: 26px;
+  display: inline-block;
+  animation: pulse-spark 3s infinite alternate ease-in-out;
+}
+
+.logo-accent {
+  color: #8067b7; /* Muted brand purple */
+  font-weight: 700;
+  margin-left: 4px;
+}
+
+@keyframes pulse-spark {
+  0% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1.2) rotate(15deg);
+    opacity: 1;
+  }
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 35px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #67586e; /* Muted text color */
+  font-weight: 500;
+  font-size: 15px;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #8067b7;
+}
+
+.nav-buttons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.login-btn {
+  text-decoration: none;
+  border: 1.5px solid transparent;
+  color: #67586e; /* Muted gray-purple text */
+  padding: 8px 22px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 14px;
+  background: transparent;
+  transition: all 0.25s ease;
+}
+
+.login-btn:hover {
+  background: rgba(241, 235, 255, 0.6);
+  color: #423747;
+  transform: translateY(-1px);
+}
+
+.register-btn {
+  text-decoration: none;
+  background: #f1ebff; /* Muted lavender page background color */
+  border: 1.5px solid #dcd1df; /* Soft border color */
+  color: #67586e; /* Muted gray-purple text */
+  padding: 8px 22px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 14px;
+  box-shadow: 0 4px 10px rgba(112, 86, 130, 0.04);
+  transition: all 0.25s ease;
+}
+
+.register-btn:hover {
+  background: #e5dbf7;
+  border-color: #cbbbd2;
+  color: #423747;
+  box-shadow: 0 6px 15px rgba(112, 86, 130, 0.08);
+  transform: translateY(-1px);
+}
+
+.nav-logout {
+  border: 0;
+  font: inherit;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px 4%;
+  }
+
+  .nav-links {
+    gap: 20px;
+  }
+
+  .nav-buttons {
+    width: 100%;
+    justify-content: center;
+    gap: 12px;
+  }
+}
