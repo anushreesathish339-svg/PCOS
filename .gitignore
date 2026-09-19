@@ -1,0 +1,5 @@
+client/node_modules/
+client/dist/
+ml-service/venv/
+__pycache__/
+*.pyc
